@@ -6,10 +6,33 @@ https://templatemo.com/tm-506-tinker
 
 */
 
+
+@font-face {
+    font-family: 'eurostilebold';
+    src: url('fonts/eurostilebold-webfont.woff2') format('woff2'),
+         url('fonts/eurostilebold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'eurostylenormal';
+    src: url('fonts/fonts/eurostyle_normal-webfont.woff2') format('woff2'),
+         url('fonts/eurostyle_normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: 'eurostylenormal',sans-serif;
+	color: black;
 }
 
 body {
@@ -26,6 +49,8 @@ p {
 	font-size: 14px;
 	line-height: 24px;
 }
+
+
 
 .parallax-content {
   width: 100%;
@@ -51,7 +76,7 @@ p {
 	background-color: #33c1cf;
 	font-size: 13px;
 	padding: 12px 18px;
-	color: #fff;
+
 	font-weight: 500;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -64,7 +89,6 @@ p {
 	background-color: #33c1cf;
 	font-size: 13px!important;
 	padding: 12px 18px;
-	color: #fff;
 	font-weight: 400!important;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -99,7 +123,6 @@ p {
 }
 
 .navbar-nav>li>a {
-	color: #fff!important;
 	font-size: 13px;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -133,13 +156,11 @@ p {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 25px;
 	text-transform: uppercase;
-	color: #fff!important;
 	transition: all 0.5s;
 	 
 }
 .navbar-brand em {
 	font-style: normal;
-	color: #f7c552;
 	font-size: 32px;
 }
 .header.active .navbar-brand {
@@ -157,7 +178,7 @@ p {
     border: none;
 }
 .page-section {
-    padding: 80px 0;
+    
 }
 .navbar-inverse .navbar-toggle {
 	margin-top: 22px;
@@ -208,10 +229,10 @@ bootstrap.min.css:5
 }
 
 .baner-content {
+	background-image: url("../img/cool-background.png");
 	width: 100%;
   	padding-top: 35vh;
   	text-align: center;
-  	background-image: url(../img/banner_bg.jpg);
   	vertical-align: middle;
 }
 
@@ -220,25 +241,25 @@ bootstrap.min.css:5
 }
 
 .baner-content .text-content h2 {
-	font-size: 36px;
+	font-size: 60px;
 	font-weight: 400;
-	color: #fff;
+	color: black;
 }
 
 .baner-content .text-content h2 span {
 	font-weight: 700;
-	color: #33c1cf!important;
+	color: #000000!important;
 }
 
 .baner-content .text-content h2 em {
 	font-style: normal;
 	font-weight: 700;
-	color: #f89624!important;
+	color: #000000!important;
 }
 
 .baner-content .text-content p {
-	color: #fff;
-	font-size: 14px;
+	color: rgb(0, 0, 0);
+	font-size: 20px;
 	line-height: 24px;
 	padding: 0px 25%;
 }
@@ -249,8 +270,7 @@ bootstrap.min.css:5
 
 
 #about {
-	padding: 150px 0px;
-	background-image: url(../img/about-bg.jpg);
+	/* background-image: url(../img/second-background.png); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -283,7 +303,7 @@ bootstrap.min.css:5
 #about .service-item .line-dec {
 	width: 100%;
 	height: 1px;
-	background-color: rgba(250, 250, 250, 0.5);
+	background-color: black;
 }
 
 #about .service-item p {
@@ -315,7 +335,6 @@ bootstrap.min.css:5
 
 .filter-categories ul li span {
   cursor: pointer;
-  color: #fff;
   display: inline-block;
   font-size: 15px;
   text-transform: capitalize;
@@ -349,7 +368,6 @@ bootstrap.min.css:5
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #fff;
 	letter-spacing: 1px;
 }
 
@@ -361,7 +379,7 @@ bootstrap.min.css:5
 }
 
 #portfolio .section-heading p {
-	color: #fff;
+
 	padding-right: 70px;
 }
 
@@ -778,6 +796,22 @@ footer .connect-us ul li a:hover {
 	background-color: #f7c552;
 }
 
+/* Added code :  */
+.secondbackground {
+	position: absolute;
+	top: 1;
+	bottom: 10;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.language-icons{
+	height: 50px;
+}
+.container{
+	padding: 80px;
+}
 
 /* RESPONSIVE */
 
@@ -913,7 +947,6 @@ footer .connect-us ul li a:hover {
 	.navbar-inverse .navbar-nav>li>a {
 		font-family: 'Roboto', sans-serif!important;
 		line-height: 55px;
-		color: #343434!important;
 	}
 
 }
