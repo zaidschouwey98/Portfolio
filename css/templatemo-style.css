@@ -796,6 +796,7 @@ footer .connect-us ul li a:hover {
 	background-color: #f7c552;
 }
 
+
 /* Added code :  */
 .secondbackground {
 	position: absolute;
@@ -811,6 +812,15 @@ footer .connect-us ul li a:hover {
 }
 .container{
 	padding: 80px;
+}
+
+.progress-bar{
+	background-image: none !important;
+	background-color: #a5208d !important;
+}
+
+.row{
+	padding: 20px;
 }
 
 /* RESPONSIVE */

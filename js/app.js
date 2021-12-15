@@ -4,9 +4,28 @@ var particles = Particles.init({
     connectParticles: true
 });
 
-
-anime({
-    targets: '#testsss',
-    translateX: 250, // -> '250px'
-    rotate: 540 // -> '540deg'
-  });
+var animateProgress = anime({
+    targets: '#progress-php',
+    width: '80%',
+    easing: 'linear',
+});
+var animateProgress = anime({
+    targets: '#progress-js',
+    width: '75%',
+    easing: 'linear',
+});
+var animateProgress = anime({
+    targets: '#progress-ruby',
+    width: '50%',
+    easing: 'linear',
+});
+var animateProgress = anime({
+    targets: '#progress-unity',
+    width: '72%',
+    easing: 'linear',
+});
+var animateProgress = anime({
+    targets: '#progress-react',
+    width: '83%',
+    easing: 'linear',
+});
