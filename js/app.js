@@ -1,5 +1,5 @@
 const controller = new ScrollMagic.Controller();
-
+var tl = anime.timeline()
 
 var particles = Particles.init({
     selector: '.secondbackground',
@@ -7,35 +7,78 @@ var particles = Particles.init({
     connectParticles: true
 });
 
+var textWrapper = document.querySelector('.ml1 .letters1');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+tl
+    .add({
+        targets: '.ml1 .letter',
+        scale: [0.3, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 300,
+        delay: (el, i) => 70 * (i + 1)
+    }).add({
+        targets: '.ml1 .line',
+        scaleX: [0, 1],
+        opacity: [0.5, 1],
+        easing: "easeOutExpo",
+        duration: 300,
+        offset: '-=875',
+        delay: (el, i, l) => 80 * (l - i)
+    })
+
 
 new ScrollMagic.Scene({
     triggerElement: "#about",
-    triggerHook: 0.8, // show, when scrolled 10% into view
-    duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
-    offset: 50 // move trigger to center of element
-  })
-    .on("progress", (scroll) => {
-        var animateProgressPhp = anime({
+    triggerHook: 0.8,
+    duration: "80%",
+    offset: 50
+})
+    .on("enter", () => {
+        var textWrapper2 = document.querySelector('.ml2 .letters2');
+        textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter2'>$&</span>");
+
+        anime.timeline()
+            .add({
+                targets: '.ml2 .letter2',
+                scale: [0.3, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 300,
+                delay: (el, i) => 70 * (i + 1)
+            }).add({
+                targets: '.ml2 .line',
+                scaleX: [0, 1],
+                opacity: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 300,
+                offset: '-=875',
+                delay: (el, i, l) => 80 * (l - i)
+            })
+        anime({
             targets: '#progress-php',
             width: '80%',
             easing: 'linear',
         });
-        var animateProgressJs = anime({
+        anime({
             targets: '#progress-js',
             width: '75%',
             easing: 'linear',
         });
-        var animateProgressRuby = anime({
+        anime({
             targets: '#progress-ruby',
             width: '50%',
             easing: 'linear',
         });
-        var animateProgressUnity = anime({
+        anime({
             targets: '#progress-unity',
             width: '72%',
             easing: 'linear',
         });
-        var animateProgressReact = anime({
+        anime({
             targets: '#progress-react',
             width: '83%',
             easing: 'linear',
@@ -45,25 +88,23 @@ new ScrollMagic.Scene({
     .addTo(controller);
 
 
+let bg3 = document.getElementById("blog")
 // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml1 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+console.log(bg3)
 
-anime.timeline()
-  .add({
-    targets: '.ml1 .letter',
-    scale: [0.3,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 300,
-    delay: (el, i) => 70 * (i+1)
-  }).add({
-    targets: '.ml1 .line',
-    scaleX: [0,1],
-    opacity: [0.5,1],
-    easing: "easeOutExpo",
-    duration: 300,
-    offset: '-=875',
-    delay: (el, i, l) => 80 * (l - i)
-  })
+var pathEls = document.querySelectorAll('path');
+for (var i = 0; i < pathEls.length; i++) {
+  var pathEl = pathEls[i];
+  var offset = anime.setDashoffset(pathEl);
+  pathEl.setAttribute('stroke-dashoffset', offset);
+  anime({
+    targets: pathEl,
+    strokeDashoffset: [offset, 0],
+    duration: anime.random(1000, 3000),
+    delay: anime.random(0, 2000),
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    autoplay: true
+  });
+}
