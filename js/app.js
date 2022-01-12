@@ -47,8 +47,10 @@ new ScrollMagic.Scene({
 
         anime.timeline()
             .add({
-                targets:'.text-wrapper2',
-                opacity:1
+                targets: '.text-wrapper2',
+                opacity: 1,
+                easing: "easeOutExpo",
+                duration: 300,
             })
             .add({
                 targets: '.ml2 .letter2',
@@ -73,27 +75,7 @@ new ScrollMagic.Scene({
 
 
 
-new ScrollMagic.Scene({
-    triggerElement: "#js-div",
-    triggerHook: 0.8,
-    duration: "80%",
-    offset: 50
-}).on("enter", () => {
 
-    anime.timeline()
-        .add({
-            targets: '#js-div',
-            opacity: 1,
-            easing: "easeOutExpo",
-            duration: 300
-        })
-        .add({
-            targets: '#progress-js',
-            width: '75%',
-            easing: 'linear',
-        });
-}).addIndicators()
-    .addTo(controller);
 
 new ScrollMagic.Scene({
     triggerElement: "#php-div",
@@ -107,7 +89,7 @@ new ScrollMagic.Scene({
             targets: '#php-div',
             opacity: 1,
             easing: "easeOutExpo",
-            duration: 300
+            duration: 1000
         })
         .add({
             targets: '#progress-php',
@@ -116,7 +98,26 @@ new ScrollMagic.Scene({
         });
 }).addIndicators()
     .addTo(controller);
-
+new ScrollMagic.Scene({
+    triggerElement: "#js-div",
+    triggerHook: 0.8,
+    duration: "80%",
+    offset: 50
+}).on("enter", () => {
+    anime.timeline()
+        .add({
+            targets: '#js-div',
+            opacity: 1,
+            easing: "easeOutExpo",
+            duration: 1000
+        })
+        .add({
+            targets: '#progress-js',
+            width: '75%',
+            easing: 'linear',
+        });
+}).addIndicators()
+    .addTo(controller);
 new ScrollMagic.Scene({
     triggerElement: "#ruby-div",
     triggerHook: 0.8,
@@ -129,7 +130,7 @@ new ScrollMagic.Scene({
             targets: '#ruby-div',
             opacity: 1,
             easing: "easeOutExpo",
-            duration: 300
+            duration: 1000
         })
         .add({
             targets: '#progress-ruby',
@@ -139,49 +140,49 @@ new ScrollMagic.Scene({
 }).addIndicators()
     .addTo(controller);
 
-    new ScrollMagic.Scene({
-        triggerElement: "#unity-div",
-        triggerHook: 0.8,
-        duration: "80%",
-        offset: 50
-    }).on("enter", () => {
-    
-        anime.timeline()
-            .add({
-                targets: '#unity-div',
-                opacity: 1,
-                easing: "easeOutExpo",
-                duration: 300
-            })
-            .add({
-                targets: '#progress-unity',
+new ScrollMagic.Scene({
+    triggerElement: "#unity-div",
+    triggerHook: 0.8,
+    duration: "80%",
+    offset: 50
+}).on("enter", () => {
+
+    anime.timeline()
+        .add({
+            targets: '#unity-div',
+            opacity: 1,
+            easing: "easeOutExpo",
+            duration: 1000
+        })
+        .add({
+            targets: '#progress-unity',
             width: '72%',
             easing: 'linear',
-            });
-    }).addIndicators()
-        .addTo(controller);
-    
-        new ScrollMagic.Scene({
-            triggerElement: "#react-div",
-            triggerHook: 0.8,
-            duration: "80%",
-            offset: 50
-        }).on("enter", () => {
-        
-            anime.timeline()
-                .add({
-                    targets: '#react-div',
-                    opacity: 1,
-                    easing: "easeOutExpo",
-                    duration: 300
-                })
-                .add({
-                    targets: '#progress-react',
+        });
+}).addIndicators()
+    .addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: "#react-div",
+    triggerHook: 0.8,
+    duration: "80%",
+    offset: 50
+}).on("enter", () => {
+
+    anime.timeline()
+        .add({
+            targets: '#react-div',
+            opacity: 1,
+            easing: "easeOutExpo",
+            duration: 1000
+        })
+        .add({
+            targets: '#progress-react',
             width: '83%',
             easing: 'linear',
-                });
-        }).addIndicators()
-            .addTo(controller);
+        });
+}).addIndicators()
+    .addTo(controller);
 
 
 let bg3 = document.getElementById("blog")
