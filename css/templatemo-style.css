@@ -57,7 +57,9 @@ p {
   min-height: 100vh;
   background-size: cover;
 }
-
+.scroll-link{
+	opacity: 0;
+}
 .primary-white-button a {
 	display: inline-block;
 	background-color: #fff;
@@ -120,6 +122,9 @@ p {
 .navbar-brand {
 	line-height: 80px;
 	padding: 0px;
+}
+.navbar-nav{
+	color: #000000 !important;
 }
 
 .navbar-nav>li>a {
@@ -188,7 +193,7 @@ p {
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background-color: #f7c552;
 }
-bootstrap.min.css:5
+/* bootstrap.min.css:5
 .navbar-toggle {
     position: relative;
     float: right;
@@ -200,7 +205,7 @@ bootstrap.min.css:5
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-}
+} */
 @media (min-width: 768px) {
     .header .navbar-brand {
         padding-left: 0;
@@ -849,6 +854,24 @@ footer .connect-us ul li a:hover {
 	transform-origin: 0 0;
   }
 
+  #php-div {
+	opacity: 0;
+  }
+  #js-div{
+	opacity: 0;
+  }
+  #unity-div{
+	opacity: 0;
+  }
+  #ruby-div{
+	opacity: 0;
+  }
+  #react-div{
+	opacity: 0;
+  }
+  .text-wrapper2{
+	  opacity: 0;
+  }
 
 /* RESPONSIVE */
 
