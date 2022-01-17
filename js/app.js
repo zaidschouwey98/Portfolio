@@ -70,7 +70,6 @@ new ScrollMagic.Scene({
                 delay: (el, i, l) => 80 * (l - i)
             })
     })
-    .addIndicators()
     .addTo(controller);
 
 
@@ -79,7 +78,7 @@ new ScrollMagic.Scene({
 
 new ScrollMagic.Scene({
     triggerElement: "#php-div",
-    triggerHook: 0.8,
+    triggerHook: 0.9,
     duration: "80%",
     offset: 50
 }).on("enter", () => {
@@ -96,11 +95,11 @@ new ScrollMagic.Scene({
             width: '80%',
             easing: 'linear',
         });
-}).addIndicators()
+})
     .addTo(controller);
 new ScrollMagic.Scene({
     triggerElement: "#js-div",
-    triggerHook: 0.8,
+    triggerHook: 0.9,
     duration: "80%",
     offset: 50
 }).on("enter", () => {
@@ -116,11 +115,11 @@ new ScrollMagic.Scene({
             width: '75%',
             easing: 'linear',
         });
-}).addIndicators()
+})
     .addTo(controller);
 new ScrollMagic.Scene({
     triggerElement: "#ruby-div",
-    triggerHook: 0.8,
+    triggerHook: 0.9,
     duration: "80%",
     offset: 50
 }).on("enter", () => {
@@ -137,12 +136,12 @@ new ScrollMagic.Scene({
             width: '50%',
             easing: 'linear',
         });
-}).addIndicators()
+})
     .addTo(controller);
 
 new ScrollMagic.Scene({
     triggerElement: "#unity-div",
-    triggerHook: 0.8,
+    triggerHook: 0.9,
     duration: "80%",
     offset: 50
 }).on("enter", () => {
@@ -159,12 +158,12 @@ new ScrollMagic.Scene({
             width: '72%',
             easing: 'linear',
         });
-}).addIndicators()
+})
     .addTo(controller);
 
 new ScrollMagic.Scene({
     triggerElement: "#react-div",
-    triggerHook: 0.8,
+    triggerHook: 0.9,
     duration: "80%",
     offset: 50
 }).on("enter", () => {
@@ -187,7 +186,6 @@ new ScrollMagic.Scene({
 
 let bg3 = document.getElementById("blog")
 // Wrap every letter in a span
-console.log(bg3)
 
 var pathEls = document.querySelectorAll('path');
 for (var i = 0; i < pathEls.length; i++) {
@@ -205,3 +203,46 @@ for (var i = 0; i < pathEls.length; i++) {
         autoplay: true
     });
 }
+
+var projects = document.querySelectorAll('.card')
+
+new ScrollMagic.Scene({
+    triggerElement: "#blog-wrapper",
+    triggerHook: 0.7,
+    duration: "80%",
+    offset: 50
+}).on("enter", () => {
+    anime({
+        targets: projects,
+        opacity: [
+        { value: 0, easing: "easeOutSine", duration: 600 },
+        { value: 1, easing: "easeInOutQuad", duration: 900 }
+        ],
+        filter: [
+        { value: "blur(5px) grayscale(100%)", easing: "easeOutSine", duration: 700 },
+        { value: "blur(0px) grayscale(0%)", easing: "easeInOutQuad", duration: 1000 }
+        ],
+        borderRadius: [
+        { value: "50%", easing: "easeOutSine", duration: 700 },
+        { value: "0%", easing: "easeInOutQuad", duration: 1000 }
+        ],
+        scale: [
+        { value: 0.5, easing: "easeOutSine", duration: 600 },
+        { value: 1, easing: "easeInOutQuad", duration: 1100 }
+        ],
+        delay: anime.stagger(200, { grid: [3, 2]})
+    });
+   
+}).on("leave",()=>{
+    anime({
+        targets: projects,
+        opacity: 0,
+        
+    });
+})
+.addIndicators()
+    .addTo(controller);
+
+
+
+

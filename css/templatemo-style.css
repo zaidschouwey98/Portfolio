@@ -389,8 +389,10 @@ p {
 }
 
 
-#testimonial {
-	background-color: #000000;
+#test {
+	background-size: cover;
+	background-image: url("../img/testimonial-background.svg");
+	background-repeat: no-repeat;
 	text-align: center;
 	padding: 100px 0px;
 }
@@ -443,7 +445,6 @@ p {
 
 
 #blog {
-	background-image: url(../img/background3.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -815,6 +816,7 @@ footer .connect-us ul li a:hover {
 
 .language-icons{
 	height: 50px;
+	width: auto;
 }
 .container{
 	padding: 80px;
@@ -873,10 +875,53 @@ footer .connect-us ul li a:hover {
 	  opacity: 0;
   }
 
+  .blog-background{
+	color: #000000;
+	background-color: rgba(173, 49, 179, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 100%;
+	height: 1100px;
+    z-index: -100;
+}
+#blog-wrapper{
+	position: relative;
+    width: 100%;
+    height: 500px;
+}
+.blog-content{
+	
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #000;
+    position: relative;
+    z-index: 100;
+}
+
+.card-text{
+	color: white;
+	font-size: 20px;
+}
+.card-title{
+	color: white;
+	font-size: 25px;
+}
+.card{
+	opacity: 0;
+}
+.card-img-top{
+
+}
 /* RESPONSIVE */
 
 @media (max-width: 991px){
-
+	/* Added code */
+	.language-icons{
+		height: 25px;
+		width: auto;
+	}
+	/* Added code end*/
 	.baner-content .text-content p {
 		padding: 0px 15%;
 	}
