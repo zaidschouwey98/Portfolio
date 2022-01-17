@@ -215,34 +215,59 @@ new ScrollMagic.Scene({
     anime({
         targets: projects,
         opacity: [
-        { value: 0, easing: "easeOutSine", duration: 600 },
-        { value: 1, easing: "easeInOutQuad", duration: 900 }
+            { value: 0, easing: "easeOutSine", duration: 600 },
+            { value: 1, easing: "easeInOutQuad", duration: 900 }
         ],
         filter: [
-        { value: "blur(5px) grayscale(100%)", easing: "easeOutSine", duration: 700 },
-        { value: "blur(0px) grayscale(0%)", easing: "easeInOutQuad", duration: 1000 }
+            { value: "blur(5px) grayscale(100%)", easing: "easeOutSine", duration: 700 },
+            { value: "blur(0px) grayscale(0%)", easing: "easeInOutQuad", duration: 1000 }
         ],
         borderRadius: [
-        { value: "50%", easing: "easeOutSine", duration: 700 },
-        { value: "0%", easing: "easeInOutQuad", duration: 1000 }
+            { value: "50%", easing: "easeOutSine", duration: 700 },
+            { value: "0%", easing: "easeInOutQuad", duration: 1000 }
         ],
         scale: [
-        { value: 0.5, easing: "easeOutSine", duration: 600 },
-        { value: 1, easing: "easeInOutQuad", duration: 1100 }
+            { value: 0.5, easing: "easeOutSine", duration: 600 },
+            { value: 1, easing: "easeInOutQuad", duration: 1100 }
         ],
-        delay: anime.stagger(200, { grid: [3, 2]})
+        delay: anime.stagger(200, { grid: [3, 2] })
     });
-   
-}).on("leave",()=>{
+
+}).on("leave", () => {
     anime({
         targets: projects,
         opacity: 0,
-        
+
     });
 })
-.addIndicators()
+    .addIndicators()
     .addTo(controller);
 
 
 
 
+
+    let shapes = [
+       
+        {
+            d: "m81,76c0,0 365,0 446,0c81,0 127,174 -8,280c-135,106 -406,183 -406,183c0,0 -32,-1 -32,-1c0,0 0,-462 0,-462z"
+        },
+        {
+            d: "m81,76c0,0 565.00354,0 565,0c0.00354,0 0,462.02694 0,462c0,0.02706 -564.00089,0 -565,0c0.99911,0 0,-462 0,-462z"
+        }
+    ]
+
+
+    anime({
+        targets: '#svg_1',
+        d: [
+            { value: shapes[0].d },
+            { value: shapes[1].d }
+        ],
+        duration: 5000,
+        direction: 'alternate',
+        autoplay: true,
+        easing: 'linear',
+        elasticity: 100,
+
+    })
