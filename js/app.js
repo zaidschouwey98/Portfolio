@@ -247,27 +247,42 @@ new ScrollMagic.Scene({
 
 
 
-    let shapes = [
-       
-        {
-            d: "m81,76c0,0 365,0 446,0c81,0 127,174 -8,280c-135,106 -406,183 -406,183c0,0 -32,-1 -32,-1c0,0 0,-462 0,-462z"
-        },
-        {
-            d: "m81,76c0,0 565.00354,0 565,0c0.00354,0 0,462.02694 0,462c0,0.02706 -564.00089,0 -565,0c0.99911,0 0,-462 0,-462z"
-        }
-    ]
 
 
+let shapes = [
+    {
+        value:"M0 0H13C13 0 18 112.117 18 184C18 255.883 13 368 13 368H0V0Z"
+    },
+    {
+        value: "M0 0.999983H50C50 0.999983 195 -5 217 70C239 145 50 378 50 378H0V0.999983Z"
+    },
+    {
+        value: "M0 1.00003H50C50 1.00003 478 -3.99998 372 147C266 298 50 378 50 378H0V1.00003Z"
+    },
+    {
+        value: "M0 3.05176e-05H317C317 3.05176e-05 552 52 446 203C340 354 200 377 200 377H0V3.05176e-05Z"
+    },
+    {
+        value: "M0 0H559.156C559.156 0 580 112.117 580 184C580 255.883 559.156 368 559.156 368H0V0Z"
+    }
+]
+
+
+
+
+new ScrollMagic.Scene({
+    triggerElement: ".chess-project",
+    triggerHook: 0.9,
+    duration: "80%",
+    offset: 50
+}).on("progress", (scroll) => {
+    console.log(Math.round(scroll.progress*shapes.length))
     anime({
-        targets: '#svg_1',
-        d: [
-            { value: shapes[0].d },
-            { value: shapes[1].d }
-        ],
-        duration: 5000,
-        direction: 'alternate',
-        autoplay: true,
-        easing: 'linear',
-        elasticity: 100,
-
-    })
+        targets: '.project-svg',
+        d: shapes[Math.round(scroll.progress*shapes.length)],
+        easing: 'easeOutQuad',
+        duration: 2000,
+    });
+})
+    .addIndicators()
+    .addTo(controller);
