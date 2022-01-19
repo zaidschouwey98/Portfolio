@@ -81,7 +81,7 @@ https://templatemo.com/tm-506-tinker
 
 
     <section id="about" class="page-section">
-        <div class="container">
+        <div class="container skills-container">
 
             <div class="text-content text-center">
                 <h1 class="ml2">
@@ -95,32 +95,32 @@ https://templatemo.com/tm-506-tinker
 
             <canvas class="secondbackground"></canvas>
             <div class="row" id="php-div">
-                <div class="col-xs-2 text-center"><img src="./img/php.png" class="language-icons"></div>
-                <div class="col-xs-10 progress">
+                <div class="col-md-2 col-sm-12 col-xs text-center"><img src="./img/php.png" class="language-icons"></div>
+                <div class="col-md-10 col-sm-12 progress">
                     <div id="progress-php" class="progress-bar" role="progressbar"
                         style="width: 0%;background-color: green" aria-valuenow="25" aria-valuemin="0"
                         aria-valuemax="100"></div>
                 </div>
             </div>
             <div class="row" id="js-div">
-                <div class="col-xs-2 text-center"><img src="./img/js.png" class="language-icons"></div>
-                <div class="col-xs-10 progress">
+                <div class="col-md-2 col-sm-12 text-center"><img src="./img/js.png" class="language-icons"></div>
+                <div class="col-md-10 col-sm-12 progress">
                     <div id="progress-js" class="progress-bar" role="progressbar"
                         style="width: 0%;background-color: green" aria-valuenow="25" aria-valuemin="0"
                         aria-valuemax="100"></div>
                 </div>
             </div>
             <div class="row" id="ruby-div">
-                <div class="col-xs-2 text-center"><img src="./img/ruby.png" class="language-icons"></div>
-                <div class="col-xs-10 progress">
+                <div class="col-md-2 col-sm-12 text-center"><img src="./img/ruby.png" class="language-icons"></div>
+                <div class="col-md-10 col-sm-12 progress">
                     <div id="progress-ruby" class="progress-bar" role="progressbar"
                         style="width: 0%;background-color: green" aria-valuenow="25" aria-valuemin="0"
                         aria-valuemax="100"></div>
                 </div>
             </div class="row">
             <div class="row" id="unity-div">
-                <div class="col-xs-2 text-center"><img src="./img/unity.png" class="language-icons"></div>
-                <div class="col-xs-10 progress">
+                <div class="col-md-2 col-sm-12 text-center"><img src="./img/unity.png" class="language-icons"></div>
+                <div class="col-md-10 col-sm-12 progress">
                     <div id="progress-unity" class="progress-bar" role="progressbar"
                         style="width: 0%;background-color: green" aria-valuenow="25" aria-valuemin="0"
                         aria-valuemax="100"></div>
@@ -128,8 +128,8 @@ https://templatemo.com/tm-506-tinker
             </div>
 
             <div class="row" id="react-div">
-                <div class="col-xs-2 text-center"><img src="./img/react.png" class="language-icons"></div>
-                <div class="col-xs-10 progress">
+                <div class="col-md-2 col-sm-12 text-center"><img src="./img/react.png" class="language-icons"></div>
+                <div class="col-md-10 col-sm-12 progress">
                     <div id="progress-react" class="progress-bar" role="progressbar"
                         style="width: 0%;background-color: green" aria-valuenow="25" aria-valuemin="0"
                         aria-valuemax="100"></div>
@@ -198,22 +198,25 @@ https://templatemo.com/tm-506-tinker
                         <span style="color:white;">My projects</span>
                     </h1>
                 </div>
+                
 
-                <div class="row chess-project">
+                <div class="row chess-project project-row">
                     <div class="col-lg-4 col-md-12">
                         <div class="card chess-card" style="width: 18rem;">
                             <img class="card-img-top" src="img/jschess.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">JSChess</h5>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="primary-white-button">
+                                    <a href="#"  data-id="about">View on Github</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 project-details">
                         <svg class="project-svg" width="580" height="368" viewBox="0 0 580 368" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path style="z-index: -50;" opacity="0.7" class="chess-svg"
-                                d="M0 0H13C13 0 18 112.117 18 184C18 255.883 13 368 13 368H0V0Z" fill="#FFFFFF" />
+                            <path style="z-index: -50;" opacity="0.7" class="chess-svg svg-path"
+                                d="M0 0H13C13 0 18 112.117 18 184C18 255.883 13 368 13 368H0V0Z" fill="#c350c8" />
                         </svg>
                         <div style="padding: 10px;">
                             <div>
@@ -231,20 +234,22 @@ https://templatemo.com/tm-506-tinker
                 </div>
 
 
-                <div class="row snakejs-project">
+                <div class="row snakejs-project project-row">
                     <div class="col-lg-4 col-md-12">
                         <div class="card snake-card" style="width: 18rem;">
                             <img class="card-img-top" src="img/snakeai.PNG" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">SnakeJS</h5>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="primary-white-button">
+                                    <a href="#"  data-id="about">View on Github</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 project-details">
                         <svg class="project-svg" width="580" height="368" viewBox="0 0 580 368" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path style="z-index: -50;" opacity="0.7" class="snake-svg"
+                            <path style="z-index: -50;" opacity="0.7" class="snake-svg svg-path"
                                 d="M0 0H13C13 0 18 112.117 18 184C18 255.883 13 368 13 368H0V0Z" fill="#FFFFFF" />
                         </svg>
                         <div style="padding: 10px;">
@@ -262,20 +267,22 @@ https://templatemo.com/tm-506-tinker
                     </div>
                 </div>
 
-                <div class="row beatthemall-project">
+                <div class="row beatthemall-project project-row">
                     <div class="col-lg-4 col-md-12">
                         <div class="card beatthemall-card" style="width: 18rem;">
                             <img class="card-img-top" src="img/beatthemall.PNG" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">BeatThemAll</h5>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="primary-white-button">
+                                    <a href="#"  data-id="about">View on Github</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 project-details">
                         <svg class="project-svg" width="580" height="368" viewBox="0 0 580 368" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path style="z-index: -50;" opacity="0.7" class="beatthemall-svg"
+                            <path style="z-index: -50;" opacity="0.7" class="beatthemall-svg svg-path"
                                 d="M0 0H13C13 0 18 112.117 18 184C18 255.883 13 368 13 368H0V0Z" fill="#FFFFFF" />
                         </svg>
                         <div style="padding: 10px;">
@@ -294,20 +301,22 @@ https://templatemo.com/tm-506-tinker
                     </div>
                 </div>
 
-                <div class="row pinteplagiat-project">
+                <div class="row pinteplagiat-project project-row">
                     <div class="col-lg-4 col-md-12">
                         <div class="card pinteplagiat-card" style="width: 18rem;">
                             <img class="card-img-top" src="img/pinteplagiat.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Pinteplagiat</h5>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="primary-white-button">
+                                    <a href="#"  data-id="about">View on Github</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 project-details">
                         <svg class="project-svg" width="580" height="368" viewBox="0 0 580 368" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path style="z-index: -50;" opacity="0.7" class="pinteplagiat-svg"
+                            <path style="z-index: -50;" opacity="0.7" class="pinteplagiat-svg svg-path"
                                 d="M0 0H13C13 0 18 112.117 18 184C18 255.883 13 368 13 368H0V0Z" fill="#FFFFFF" />
                         </svg>
                         <div style="padding: 10px;">
@@ -326,20 +335,22 @@ https://templatemo.com/tm-506-tinker
                     </div>
                 </div>
 
-                <div class="row ageofevolution-project">
+                <div class="row ageofevolution-project project-row">
                     <div class="col-lg-4 col-md-12">
                         <div class="card ageofevolution-card" style="width: 18rem;">
                             <img class="card-img-top" src="img/ageofevolution.PNG" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Age of Evolution</h5>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="primary-white-button">
+                                    <a href="#"  data-id="about">View on Github</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 project-details">
                         <svg class="project-svg" width="580" height="368" viewBox="0 0 580 368" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path style="z-index: -50;" opacity="0.7" class="ageofevolution-svg"
+                            <path style="z-index: -50;" opacity="0.7" class="ageofevolution-svg svg-path"
                                 d="M0 0H13C13 0 18 112.117 18 184C18 255.883 13 368 13 368H0V0Z" fill="#FFFFFF" />
                         </svg>
                         <div style="padding: 10px;">

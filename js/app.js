@@ -254,19 +254,20 @@ class ProjectAnimation {
             triggerElement: card,
             triggerHook: 1,
             duration: "80%",
-            offset: 50
+            offset: 50,
+            reverse:false
         }).on("enter", () => {
-            anime({
+            console.log("test")
+            anime.timeline().add({
                 targets: card,
                 easing: "easeInQuad",
-                opacity: this.opacity,
+                opacity: 1,
                 filter: this.filter,
                 borderRadius: [
                     { value: "50%", easing: "easeOutSine", duration: 700 },
                     { value: "0%", easing: "easeInOutQuad", duration: 1000 }
                 ],
                 scale: [
-                    { value: 0.5, easing: "easeOutSine", duration: 600 },
                     { value: 1, easing: "easeInOutQuad", duration: 1100 }
                 ],
                 duration: 500,

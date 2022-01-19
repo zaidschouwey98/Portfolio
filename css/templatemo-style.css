@@ -908,27 +908,38 @@ footer .connect-us ul li a:hover {
 	font-size: 25px;
 }
 .card{
+	margin: 10%;
+	text-align: center;
 	opacity: 0;
-	scale: 0.5;
+	align-items: center;
+
 }
 
+
 .project-svg{
+	height: auto;
+	width: auto;
 	position: absolute;
 	z-index: -50;
+}
+.svg-path{
+	/* From https://css.glass */
+	fill: #c350c8;
+	opacity: 0.9;
 }
 
 
 .project-title{
 	opacity: 0;
 	padding: 10px;
-	color: black;
+	color: white !important;
 	font-size: 50px;
 	
 }
 
 .project-content{
 	width: 200px;
-	color:black;
+	color:white;
 	font-size: 20px;
 
 	text-align: justify;
@@ -939,10 +950,17 @@ footer .connect-us ul li a:hover {
 	margin-right: 25%;
 	opacity: 0;
 }
-.row{
-	margin-bottom: 60px;
+.project-row{
+
+	height: 367px;
 }
 
+.skills-container{
+	background-image: url("../img/skillsdivbg.svg");
+	background-repeat: no-repeat;
+	background-size:contain;
+	background-position: center;
+}
 
 /* RESPONSIVE */
 
