@@ -344,7 +344,7 @@ class ProjectAnimation {
 let project = new ProjectAnimation(controller);
 if (window.matchMedia("(min-width: 1000px)").matches) {
     console.log("pc")
-    project.draw(".chess-project", ".chess-svg", ".chess-title", ".chess-content", ".chess-image");
+
     project.draw(".snakejs-project", ".snake-svg", ".snake-title", ".snake-content", ".snake-image");
     project.draw(".beatthemall-project", ".beatthemall-svg", ".beatthemall-title", ".beatthemall-content", ".beatthemall-image");
     project.draw(".pinteplagiat-project", ".pinteplagiat-svg", ".pinteplagiat-title", ".pinteplagiat-content", ".pinteplagiat-image");
@@ -355,7 +355,7 @@ if (window.matchMedia("(min-width: 1000px)").matches) {
     project.drawCard(".pinteplagiat-card")
     project.drawCard(".ageofevolution-card")
 } else {
-    project.drawCard(".chess-card")
+
     project.drawCard(".snake-card")
     project.drawCard(".beatthemall-card")
     project.drawCard(".pinteplagiat-card")
