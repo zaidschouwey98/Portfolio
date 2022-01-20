@@ -180,7 +180,7 @@ new ScrollMagic.Scene({
             width: '83%',
             easing: 'linear',
         });
-}).addIndicators()
+})
     .addTo(controller);
 
 
@@ -338,18 +338,19 @@ class ProjectAnimation {
             }
 
 
-        }).addTo(this.controller);
+        })
+        .addIndicators()
+        .addTo(this.controller);
     }
 }
 let project = new ProjectAnimation(controller);
-if (window.matchMedia("(min-width: 1000px)").matches) {
+if (window.matchMedia("(min-width: 1200px)").matches) {
     console.log("pc")
 
     project.draw(".snakejs-project", ".snake-svg", ".snake-title", ".snake-content", ".snake-image");
     project.draw(".beatthemall-project", ".beatthemall-svg", ".beatthemall-title", ".beatthemall-content", ".beatthemall-image");
     project.draw(".pinteplagiat-project", ".pinteplagiat-svg", ".pinteplagiat-title", ".pinteplagiat-content", ".pinteplagiat-image");
     project.draw(".ageofevolution-project", ".ageofevolution-svg", ".ageofevolution-title", ".ageofevolution-content", ".ageofevolution-image");
-    project.drawCard(".chess-card")
     project.drawCard(".snake-card")
     project.drawCard(".beatthemall-card")
     project.drawCard(".pinteplagiat-card")
@@ -366,10 +367,64 @@ if (window.matchMedia("(min-width: 1000px)").matches) {
 
 
 
+anime({
+    targets: "#contact-title",
+    easing: "easeInQuad",
+    translateX: "100%",
+    duration: 0,
+  });
+  
+  anime({
+    targets: "#contact-content",
+    easing: "easeInQuad",
+    translateX: "-100%",
+    duration: 0,
+  });
+  anime({
+    targets: "#contact-button",
+    easing: "easeInQuad",
+    translateY: "1000%",
+    duration: 0,
+  });
 
 
+const animationContactTitle = anime({
+    targets: "#contact-title",
+    easing: "easeInQuad",
+    translateX: "0%",
+    duration: 1000,
+    autoplay: false
+  });
+  const animationContactContent = anime({
+    targets: "#contact-content",
+    easing: "easeInQuad",
+    translateX: "0%",
+    duration: 1000,
+    autoplay: false
+  });
+  const animationContactButton = anime({
+    targets: "#contact-button",
+    easing: "easeInQuad",
+    translateY: "0%",
+    duration: 1000,
+    autoplay: false
+  });
 
-
+  
+  new ScrollMagic.Scene({
+    triggerElement: "#contact-us",
+    triggerHook:1,
+    duration: 500
+  })
+    .on("progress", (scroll) => {
+    
+      const seekValue = 1000 * scroll.progress;
+      animationContactTitle.seek(seekValue);
+      animationContactContent.seek(seekValue);
+      animationContactButton.seek(seekValue);
+    })
+    .addTo(controller);
+  
 
 
 
