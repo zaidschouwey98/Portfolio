@@ -1,6 +1,8 @@
 const controller = new ScrollMagic.Controller();
 var tl = anime.timeline()
 
+
+// Particle JS
 var particles = Particles.init({
     selector: '.secondbackground',
     color: ['#DA0463', '#404B69', '#DBEDF3'],
@@ -184,9 +186,10 @@ new ScrollMagic.Scene({
     .addTo(controller);
 
 
-let bg3 = document.getElementById("blog")
-// Wrap every letter in a span
 
+
+// Source : https://codepen.io/juliangarnier/pen/ZeEpgd
+// --------------------------------------------
 var pathEls = document.querySelectorAll('path');
 for (var i = 0; i < pathEls.length; i++) {
     var pathEl = pathEls[i];
@@ -203,7 +206,7 @@ for (var i = 0; i < pathEls.length; i++) {
         autoplay: true
     });
 }
-
+// --------------------------------------------
 
 
 
@@ -365,48 +368,32 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
 
 
+console.log(document.getElementById("section-heading").offsetWidth)
+document.getElementById('contact-title').style.transform = 'translateY(-1200px)';
+document.getElementById('contact-content').style.transform = 'translateX(-200px)';
+document.getElementById('contact-button').style.transform = 'translateY(1000%)';
 
-
-anime({
-    targets: "#contact-title",
-    easing: "easeInQuad",
-    translateX: "100%",
-    duration: 0,
-  });
-  
-  anime({
-    targets: "#contact-content",
-    easing: "easeInQuad",
-    translateX: "-100%",
-    duration: 0,
-  });
-  anime({
-    targets: "#contact-button",
-    easing: "easeInQuad",
-    translateY: "1000%",
-    duration: 0,
-  });
 
 
 const animationContactTitle = anime({
     targets: "#contact-title",
     easing: "easeInQuad",
-    translateX: "0%",
-    duration: 1000,
+    translateY: "0",
+ 
     autoplay: false
   });
   const animationContactContent = anime({
     targets: "#contact-content",
     easing: "easeInQuad",
-    translateX: "0%",
-    duration: 1000,
+    translateX: "0",
+
     autoplay: false
   });
   const animationContactButton = anime({
     targets: "#contact-button",
     easing: "easeInQuad",
-    translateY: "0%",
-    duration: 1000,
+    translateY: "0",
+
     autoplay: false
   });
 
@@ -414,7 +401,7 @@ const animationContactTitle = anime({
   new ScrollMagic.Scene({
     triggerElement: "#contact-us",
     triggerHook:1,
-    duration: 500
+    duration: 1750
   })
     .on("progress", (scroll) => {
     
@@ -423,6 +410,7 @@ const animationContactTitle = anime({
       animationContactContent.seek(seekValue);
       animationContactButton.seek(seekValue);
     })
+    .addIndicators()
     .addTo(controller);
   
 

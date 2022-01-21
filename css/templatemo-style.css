@@ -562,6 +562,17 @@ p {
 	background-size: 100% 100%;
 	text-align: center;
 	padding: 80px 0px;
+	height: 2000px;
+	
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+#contact-form{
+	position: absolute;
+	bottom: 400px;
 }
 
 #contact-us .section-heading h4 {
