@@ -389,7 +389,8 @@ p {
 
 
 #journey {
-	height: 500px;
+	height: 618px;
+	width:100%;
 	background-size: cover;
 	background-image: url("../img/testimonial-background.svg");
 	background-position: center;
