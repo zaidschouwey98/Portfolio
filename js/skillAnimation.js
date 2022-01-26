@@ -3,7 +3,6 @@ class SkillsAnimation{
         this.controller = controller;
     }
     addAnimation(skillDiv,progressBar,percentage){
-        console.log(percentage)
         new ScrollMagic.Scene({
             triggerElement: skillDiv,
             triggerHook: 0.9,

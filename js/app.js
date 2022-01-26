@@ -6,12 +6,16 @@ document.getElementById('contact-title').style.transform = 'translateY(-1200px)'
 document.getElementById('contact-content').style.transform = 'translateX(-200px)';
 document.getElementById('contact-button').style.transform = 'translateY(1000%)';
 
+
+
 // Particle JS
+var ctx = document.getElementById("secondbackground");
 var particles = Particles.init({
-    selector: '.secondbackground',
+    selector: '#secondbackground',
     color: ['#DA0463', '#404B69', '#DBEDF3'],
     connectParticles: true
 });
+ctx.width = window.innerWidth;
 
 // Create the letter by letter appearance effect and the button appearance on the main screen
 // Source : https://tobiasahlin.com/moving-letters/#1
@@ -130,7 +134,8 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
 
 
-
+// Animate contact section
+// --------------------------------------------
 const animationContactTitle = anime({
     targets: "#contact-title",
     easing: "easeInQuad",
@@ -167,7 +172,7 @@ const animationContactTitle = anime({
       animationContactButton.seek(seekValue);
     })
     .addTo(controller);
-  
+// --------------------------------------------
 
 
 
