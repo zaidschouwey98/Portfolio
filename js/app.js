@@ -46,6 +46,7 @@ anime.timeline()
     })
 
 // Create the letter by letter apearance effect on the skills section
+// --------------------------------------------
 new ScrollMagic.Scene({
     triggerElement: "#about",
     triggerHook: 0.8,
@@ -82,16 +83,18 @@ new ScrollMagic.Scene({
             })
     })
     .addTo(controller);
+// --------------------------------------------
 
 
 // Add the animations to the skills section
+// --------------------------------------------
 skillAnim = new SkillsAnimation(controller);
 skillAnim.addAnimation("#php-div","#progress-php","80%");
 skillAnim.addAnimation("#js-div","#progress-js","70%");
 skillAnim.addAnimation("#ruby-div","#progress-ruby","55%");
 skillAnim.addAnimation("#unity-div","#progress-unity","85%");
 skillAnim.addAnimation("#react-div","#progress-react","70%");
-
+// --------------------------------------------
 
 // Source : https://codepen.io/juliangarnier/pen/ZeEpgd
 // --------------------------------------------
@@ -114,6 +117,7 @@ for (var i = 0; i < pathEls.length; i++) {
 // --------------------------------------------
 
 // Add the animations to the project section
+// --------------------------------------------
 let project = new ProjectAnimation(controller);
 if (window.matchMedia("(min-width: 1200px)").matches) {
     project.draw(".snakejs-project", ".snake-svg", ".snake-title", ".snake-content", ".snake-image");
@@ -125,12 +129,13 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
     project.drawCard(".pinteplagiat-card")
     project.drawCard(".ageofevolution-card")
 } else {
+    // If the windows isn't large enough to show correctly the project details, just show the card.
     project.drawCard(".snake-card")
     project.drawCard(".beatthemall-card")
     project.drawCard(".pinteplagiat-card")
     project.drawCard(".ageofevolution-card")
 }
-
+// --------------------------------------------
 
 
 

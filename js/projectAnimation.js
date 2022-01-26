@@ -43,7 +43,6 @@ class ProjectAnimation {
             offset: 50,
             reverse:false
         }).on("enter", () => {
-            console.log("test")
             anime.timeline().add({
                 targets: card,
                 easing: "easeInQuad",
@@ -98,7 +97,6 @@ class ProjectAnimation {
                 })
             }
             if (Math.round(scroll.progress * (this.shapes.length - 1)) >= 4 && !imageDrawn) {
-                console.log("test")
                 imageDrawn = true;
                 projectTimeline.add({
                     targets: image,
