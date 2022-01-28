@@ -1,6 +1,7 @@
 class ProjectAnimation {
     constructor(controller) {
         this.controller = controller
+        // This is every shapes of my svg
         this.shapes = [
             {
                 value: "M0 0H13C13 0 18 112.117 18 184C18 255.883 13 368 13 368H0V0Z"
@@ -27,6 +28,10 @@ class ProjectAnimation {
             { value: "blur(0px) grayscale(0%)", easing: "easeInOutQuad", duration: 500 }
         ]
     }
+    /**
+     * Hide an element by its classname
+     * @param {*} className 
+     */
     hideBlock(className) {
         anime({
             targets: className,
@@ -35,6 +40,10 @@ class ProjectAnimation {
             duration: 200,
         })
     }
+    /**
+     * Draw the card in html. Also set its trigger point
+     * @param {*} card 
+     */
     drawCard(card) {
         new ScrollMagic.Scene({
             triggerElement: card,
@@ -59,17 +68,32 @@ class ProjectAnimation {
             })
         }).addTo(this.controller);
     }
+
+    /**
+     * Draw the svg, and show the reste as things progress
+     * @param {*} triggerElement 
+     * @param {*} svg 
+     * @param {*} title 
+     * @param {*} content 
+     * @param {*} image 
+     */
     draw(triggerElement, svg, title, content, image) {
+        // To know if the contents are already in, for hiding purpose
         let titleDrawn = false;
         let contentDrawn = false;
         let imageDrawn = false;
-
+        // Create a scene that trigger when entering the triggerElement
         new ScrollMagic.Scene({
             triggerElement: triggerElement,
             triggerHook: 1,
             duration: "80%",
             offset: 50
         }).on("progress", (scroll) => {
+            /*
+                Use the scroll parameter to set the animation.
+                The current scroll parameter is between 0 and 1. I then use this value by transforming it in percentage, 
+                and then set the animations state based on the percentage of the page that is scrolled.
+            */
             let projectTimeline = anime.timeline().add({
                 targets: svg,
                 d: this.shapes[Math.round(scroll.progress * (this.shapes.length - 1))],
@@ -107,7 +131,9 @@ class ProjectAnimation {
                 })
             }
 
-
+            /*
+                Same thing for hiding the elements
+            */
             if (titleDrawn && Math.round(scroll.progress * (this.shapes.length - 1)) < 1) {
                 this.hideBlock(title)
                 titleDrawn = false;

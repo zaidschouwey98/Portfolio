@@ -2,6 +2,12 @@ class SkillsAnimation{
     constructor(controller){
         this.controller = controller;
     }
+    /**
+     * Add an animation to a div and a progressBar. Set to progressBar to the percentage given in the parameter.
+     * @param {*} skillDiv 
+     * @param {*} progressBar 
+     * @param {*} percentage 
+     */
     addAnimation(skillDiv,progressBar,percentage){
         new ScrollMagic.Scene({
             triggerElement: skillDiv,
